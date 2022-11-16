@@ -1,0 +1,28 @@
+/*Please modify the styles below for barcode/label printing */
+#divPrint { width: 8.45in; height: 10.3in; display: block; border: 1px solid #CCC; margin: 10px auto; padding-top: 0.1in; page-break-after:always; }
+#divPrint .item { display: block; overflow: hidden; text-align: center; border: 1px dotted #CCC; /*font-size: 12px; */line-height: 14px; text-transform: uppercase; float: left; }
+.printStic { /*font-size: 10px*/ line-height: 12px; margin: 0 auto; display: block; text-align: center; border: 1px dotted #CCC; /*font-size: 12px;*/ line-height: 14px; text-transform: uppercase; page-break-after:always; }
+#divPrint .style30 { width: 2.625in; height: 1in; margin: 0 0.07in; padding-top: 0.05in; }
+#divPrint .style30:nth-child(3n+1) {  margin-left: 0.1in; }
+#divPrint .style20 { width: 4in; height: 1in; margin: 0 0.1in; padding-top: 0.05in; }
+#divPrint .style14 { width: 4in; height: 1.33in; margin: 0 0.1in; padding-top: 0.1in; }
+#divPrint .style10 { width: 4in; height: 2in; margin: 0 0.1in; padding-top: 0.1in; /*font-size: 14px; */line-height: 20px; }
+#divPrint #divPrint_site, #divPrint #divPrint_name, #divPrint #divPrint_image, #divPrint .variants { display: block; }
+#divPrint #divPrint_price, #divPrint #divPrint_unit, #divPrint #divPrint_category { display: inline-block; }
+#divPrint .product_image { width: 0.8in; float: left; margin: 5px; }
+#divPrint .style10 .product_image { width: 1in; }
+#divPrint .style30 .product_image { width: 0.5in; float: left; margin: 5px; }
+#divPrint .product_image img { max-width: 100%; }
+.printStic .product_image, .style40 .product_image { display: none; }
+.printStic #divPrint_site, .printStic #divPrint_name, .printStic #divPrint_image, .printStic #divPrint_price { display: block; }
+#divPrint #divPrint_image img, .printStic #divPrint_image img { max-width: 100%; }
+#divPrint #divPrint_site { font-weight: bold; }
+/*#divPrint #divPrint_site, #divPrint #divPrint_name { font-size: 14px; }*/
+/*#divPrint .style10 #divPrint_site, #divPrint .style10 #divPrint_name { font-size: 16px; }*/
+
+@media print {
+    .content-wrapper{ margin: 0 !important; }
+    .barcode, .barcodea4 { margin: 0; }
+    .barcode, .barcode .item, .barcodea4, .barcodea4 .item, .style50, .div50 { border: none !important; }
+    .div50, .modal-content { page-break-after:always; }
+}
